@@ -21,10 +21,41 @@
     <section>
         <img src="img/stars.png" alt="stars" id="stars">
         <img src="img/moon.png" alt="moon" id="moon">
-        <img src="img/mountains_behind.png" alt="mountain" id="mountains_behind">
+        <img src="img/mountains_behind.png" alt="mountain" id="mountains_behind">       
         <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
         <img src="img/mountains_front.png" alt="mountain" id="mountains_front">
     </section>
+
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effect</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae assumenda architecto, laboriosam voluptatibus facilis obcaecati atque maiores blanditiis aliquam, sed, nemo ut. Deleniti, sequi iure, voluptate itaque ipsam similique laboriosam reprehenderit eligendi necessitatibus impedit molestias at maxime! Placeat, asperiores velit. <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fugiat vitae necessitatibus, placeat suscipit ipsam. Iure suscipit beatae autem quam, eligendi non magni distinctio, earum eaque consectetur temporibus? Ullam ipsa iusto ab voluptates ea. Quam dolore sequi adipisci exercitationem rerum. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae assumenda architecto, laboriosam voluptatibus facilis obcaecati atque maiores blanditiis aliquam, sed, nemo ut. Deleniti, sequi iure, voluptate itaque ipsam similique laboriosam reprehenderit eligendi necessitatibus impedit molestias at maxime! Placeat, asperiores velit. <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fugiat vitae necessitatibus, placeat suscipit ipsam. Iure suscipit beatae autem quam, eligendi non magni distinctio, earum eaque consectetur temporibus? Ullam ipsa iusto ab voluptates ea. Quam dolore sequi adipisci exercitationem rerum.</p>
+    </div>
+
+    <script>
+        let moon = document.getElementById('moon');
+        let stars = document.getElementById('stars');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            moon.style.top = value * 1.05 + '%';
+            stars.style.left = value * 0.25 + '%';
+            mountains_behind.style.top = value * 0.5 + '%';
+            mountains_front.style.top = value * 0 + '%';
+
+            text.style.marginRight = value * 4 + '%';
+            text.style.marginTop = value * 1.5 + '%';
+            btn.style.marginTop = value * 1.5 + '%';
+            header.style.top = value * 0.5 + 'px';
+
+        })
+    </script>
 
 </body>
 </html>
