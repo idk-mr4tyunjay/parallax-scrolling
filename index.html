@@ -44,14 +44,14 @@
         window.addEventListener('scroll', function(){
             let value = window.scrollY;
 
-            moon.style.top = value * 1.05 + '%';
-            stars.style.left = value * 0.25 + '%';
-            mountains_behind.style.top = value * 0.5 + '%';
-            mountains_front.style.top = value * 0 + '%';
+            moon.style.top = value * 1.05 + 'px';
+            stars.style.left = value * 0.25 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
 
-            text.style.marginRight = value * 4 + '%';
-            text.style.marginTop = value * 1.5 + '%';
-            btn.style.marginTop = value * 1.5 + '%';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
             header.style.top = value * 0.5 + 'px';
 
         })
